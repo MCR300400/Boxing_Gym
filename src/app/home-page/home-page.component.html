@@ -1,0 +1,85 @@
+<!--  NAVBAR -->
+<div class="navbar">
+<app-navbar> </app-navbar>
+</div>
+
+
+
+
+
+<div class="page-content">
+    <!--  IMMAGINE DI GUANTI -->
+    <div class="div-centrato"> <img src="assets/immagini/guantoni.png" alt="guanti boxe"></div>
+
+
+<!--  CARD RING -->
+<mat-card class="card-container">
+    <mat-card-header>
+            <mat-card-title> <p class="center-text">Ring</p> </mat-card-title>
+
+    </mat-card-header>
+    <button mat-button (click)="mc()" > Premere per visualizzare foto</button>
+    
+    <mat-card-content>
+        
+            <img class="card-image" *ngIf="mostraContenuto"  src="assets/immagini/ring.png" alt="Photo of our ring!">
+        <div class="center-container">
+            <p *ngIf="mostraContenuto" class="center-text">QUESTO E' IL NOSTRO RING</p>
+        </div>
+    </mat-card-content>
+</mat-card>
+
+
+<!--  CARD ALLENATORI --> 
+<mat-card class="card-container">
+    <mat-card-header>
+            <mat-card-title> <p class="center-text">Allenatore</p> </mat-card-title>
+            
+            
+    </mat-card-header>
+
+    <button mat-button (click)="mc1()" > Premere per visualizzare foto</button>
+
+    <mat-card-content>
+            <img class="card-image" *ngIf="mostraContenuto1" src="assets/immagini/Michele.png" alt="Photo of our ring!">
+        <div class="center-container">
+            <p *ngIf="mostraContenuto1" class="center-text">Michele Battistacci <br> NON SI MOLLA MAI!</p>
+        </div>
+    </mat-card-content>
+</mat-card>
+
+
+<!--  CARD ALLENAMENTI -->
+<mat-card class="card-container">
+    <mat-card-header>
+        <mat-card-title> <p class="center-text">Allenamenti</p> </mat-card-title>   
+    </mat-card-header>
+
+    <button mat-button (click)="mc2()" > Premere per visualizzare foto</button>
+    
+    <mat-card-content>
+        <video class="card-image" *ngIf="mostraContenuto2" controls >
+            <source src="assets/video/allenamento1.MP4" type="video/mp4">
+            Il tuo browser non supporta il tag video.
+        </video>
+        <video class="card-image" *ngIf="mostraContenuto2" controls >
+            <source src="assets/video/allenamento2.MP4" type="video/mp4">
+            Il tuo browser non supporta il tag video.
+        </video>
+        <video class="card-image" *ngIf="mostraContenuto2" controls >
+            <source src="assets/video/allenamento3.MP4" type="video/mp4">
+            Il tuo browser non supporta il tag video.
+        </video>
+     
+        <div class="center-container">
+            <p *ngIf="mostraContenuto2" class="center-text">QUESTI SONO ESEMPI DI ALLENAMENTI</p>
+        </div>
+    </mat-card-content>
+</mat-card> 
+
+<div class="div-centrato">
+     <p id="contattaci" class="paragrafo-trasparente"> <strong>Contattaci</strong> <br> 
+        email: perugia.boxe.school@gmail.com <br>
+        numero: 0753456783 </p>
+ </div>
+</div>

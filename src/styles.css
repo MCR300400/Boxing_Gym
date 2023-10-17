@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { 
+    margin: 0; 
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    background-image: url('assets/immagini/logo.png');
+    background-size: cover;  /*per coprire l'intera area dello sfondo */
+    background-repeat: no-repeat; /* per evitare la ripetizione dell'immagine */
+    background-attachment: fixed; /* per fissare l'immagine in posizione anche durante lo scroll */
+
+
+
+ }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

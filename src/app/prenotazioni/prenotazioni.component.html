@@ -1,0 +1,45 @@
+
+
+<mat-toolbar [ngClass]="'custom-black-navbar'">
+    <div class="logo"><img src="assets/immagini/logo.png" alt="logo"></div>
+    <button mat-button [routerLink]="['/prenotazioni', mail, password]">Prenotazioni</button>
+    <button mat-button [routerLink]="['/lezioni-utenti', mail, password]">Ricerca Lezioni</button>
+    <button mat-button routerLink="/">Log out</button>
+</mat-toolbar>
+<div class="hidden" id="nolezioni">
+  <mat-card class="distanziamento">
+    <mat-card-content><p><br>CI DISPIACE MA NON HA ANCORA NESSUNA LEZIONE PRENOTATA</p></mat-card-content>
+  </mat-card>
+</div>
+
+<div>
+    <table mat-table [dataSource]="righe" id = "myTable" class="hidden" >
+        <!-- Definizione delle colonne -->
+        <ng-container matColumnDef="data">
+          <th mat-header-cell *matHeaderCellDef> Data </th>
+          <td mat-cell *matCellDef="let righe"> {{ righe.data }} </td>
+        </ng-container>
+        
+        <ng-container matColumnDef="allenatore">
+          <th mat-header-cell *matHeaderCellDef> Allenatore </th>
+          <td mat-cell *matCellDef="let righe"> {{ righe.allenatore }} </td>
+        </ng-container>
+        
+        <ng-container matColumnDef="ora">
+          <th mat-header-cell *matHeaderCellDef> Ora </th>
+          <td mat-cell *matCellDef="let righe"> {{ righe.orario }} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="cancella">
+          <th mat-header-cell *matHeaderCellDef> Prenota </th>
+          <td mat-cell *matCellDef="let righe; let i = index">
+          <button mat-button (click)="cancellaPrenotazione(righe, i)"> Cancella Prenotazione </button>
+          
+          </td>
+        </ng-container>
+      
+        <!-- Associazione delle colonne alla tabella -->
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table> 
+</div>

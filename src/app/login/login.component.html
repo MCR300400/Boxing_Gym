@@ -1,0 +1,22 @@
+
+
+
+<div class="navbar">
+    <app-navbar2> </app-navbar2>
+</div>
+
+
+<form (ngSubmit)="loginUser()" class="centrato">
+  <div>
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" [(ngModel)]="username" required>
+  </div>
+  <div>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" [(ngModel)]="password" required>
+  </div>
+  <button type="submit">login</button>
+  <div *ngIf="loginError" class="error-message" >
+    Login fallita!
+  </div>
+</form>

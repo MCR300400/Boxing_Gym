@@ -1,0 +1,32 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Valore alto per assicurarsi che la navbar sia sopra gli altri elementi */
+  }
+  
+
+
+
+.logo img {
+    max-width: 40px; /* Larghezza massima desiderata */
+    max-height: 40px; /* Altezza massima desiderata */
+    margin-right: 10px;
+    margin-top: 20%;
+}
+
+.hidden {
+    display: none;
+}
+
+.distanziamento {
+    margin-top: 100px;
+}
+
+
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}

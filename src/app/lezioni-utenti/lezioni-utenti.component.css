@@ -1,0 +1,43 @@
+  
+.center {
+  display: flex;
+  margin-top: 20vw;
+  justify-content: center;
+}
+
+.mat-form-field {
+  margin-right: 12px;
+}
+
+
+.scritta-grande {
+  margin-bottom: 30px;
+  font-size: 5vw;
+}
+
+
+.scritta-media {
+  padding: 10px;
+  font-size: 2vw;
+}
+
+.hidden {
+  display: none;
+}
+
+p {
+  line-height: 1.5;
+}
+
+.custom-black-navbar {
+  background-color: black;
+  color: white;
+}
+
+
+.logo img {
+  max-width: 40px; /* Larghezza massima desiderata */
+  max-height: 40px; /* Altezza massima desiderata */
+  margin-right: 10px;
+  margin-top: 20%;
+}
